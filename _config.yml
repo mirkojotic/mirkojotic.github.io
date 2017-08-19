@@ -13,23 +13,22 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Programming Blog by Mirko Jotic
+title: Another boring blog :)
 email: joticmirko@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+    Blog covering PHP, Javascript and Java topics. If I notice anything interesting that I want to share or if I learn something cool I'll try to write a post about it. One thing I guarantee is a million spelling errors.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://jotic.us" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: peaceman2017 
 github_username: mirkojotic 
+google_analytics: UA-104945391-1
 
 # Build settings
 markdown: kramdown
 theme: minima 
-#theme: jekyll-theme-merlot
 plugins:
   - jekyll-feed
+#  - jekyll-admin
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
