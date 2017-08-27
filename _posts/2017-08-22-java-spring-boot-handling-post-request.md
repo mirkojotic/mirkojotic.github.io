@@ -27,7 +27,7 @@ src
 
 Let's start with `Project.java`
 
-```
+```java
 package us.jotic.trello.project;
 
 import javax.persistence.Column;
@@ -88,23 +88,23 @@ public class Project {
 }
 ```
 
-This is our model and it will map to a row of data in our database. Properties mapped to columns. 
+This is our entity and it will map to a row of data in our database. Properties represent columns in a row. 
 
 There is a couple of interesting details here. 
 
 As a challenge more than anything else I've decided to use UUID's as my primary keys. It took some research but I'm satisfied how it turned out.
-```
-...
+```java
+//...
 @GeneratedValue(generator="system-uuid") ; // name of the primary key generator to use
 @GenericGenerator(name="system-uuid", strategy = "uuid"); // used by our ORM
-...
+//...
 ```
 
-Another thing that I had a problem with is a JSON serializer ( jackson ). It appears that when serializing/desirializing Java objects jackson needs to have either a dummy constructor ( that accepts no parameters ) or a @JsonCreator annotation. I've opted for a simpler although not necessarily better solution and  just added a dummy constructor.
+Another thing that I had a problem with is a JSON serializer ( jackson ). It appears that when serializing/desirializing Java objects jackson needs to have either a dummy constructor ( that accepts no parameters ) or a `@JsonCreator` annotation. I've opted for a simpler although not necessarily better solution and  just added a dummy constructor.
 
 Next we need to make a repository for our model (`ProjectRepository.java`)
 
-```
+```java
 package us.jotic.trello.project;
 
 import org.springframework.data.repository.CrudRepository;
@@ -114,11 +114,11 @@ public interface ProjectRepository extends CrudRepository<Project, String> {
 }
 ```
 
-Very simple but gives us great power by exposing CRUD methods on our model.
+Very simple but gives us great power by exposing CRUD methods on our entity.
 
 Following an established convention we need to make a `ProjectService.java` to interact with our repository
 
-```
+```java
 package us.jotic.trello.project;
 
 import java.util.List;
@@ -147,11 +147,11 @@ public class ProjectService {
 
 ```
 
-We are using @Autowired to inject our repository class and the rest of the code is pretty self explanotory.
+We are using `@Autowired` to inject our repository class and the rest of the code is pretty self explanotory.
 
 And now the actuall outward facing API. Let's make a `ProjectController.java`
 
-```
+```java
 package us.jotic.trello.project;
 
 import java.util.List;
@@ -187,7 +187,7 @@ public class ProjectController {
 
 ```
 
-We are using @Autowired annotation to inject `ProjectService` in our controller. Also there are three endpoints. Two for getting Projects and a third that we'll actually use to create new projects. This should be all we need to create a project through our API but we need to check if this is actually working.
+We are using `@Autowired` annotation to inject `ProjectService` in our controller. Also there are three endpoints. Two for getting Projects and a third that we'll actually use to create new projects. This should be all we need to create a project through our API but we need to check if this is actually working.
 
 In order to avoid manual testing every time we make a change to any of the parts of our API we will want to set up some sort of testing. 
 
@@ -210,7 +210,7 @@ This is the rest of our updated folder structure
 
 Let's add a test class for our controller `ProjectControllerTest`
 
-```
+```java
 package us.jotic.trello.project;
 
 import static org.mockito.Matchers.contains;
