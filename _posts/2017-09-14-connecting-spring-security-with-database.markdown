@@ -1,6 +1,5 @@
 ---
 title: Java Spring - Connecting Spring Security To  A Database
-layout: post
 date: '2017-09-14 21:04:24'
 ---
 
