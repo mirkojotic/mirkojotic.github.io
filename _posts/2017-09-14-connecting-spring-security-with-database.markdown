@@ -1,6 +1,7 @@
 ---
-title: Java Spring Boot - Connecting Spring Security To  A Database
+title: Java Spring - Connecting Spring Security To  A Database
 layout: post
+date: '2017-09-14 21:04:24'
 ---
 
 In my previous [post](http://jotic.us/2017/09/10/java-spring-boot-adding-authentication-to-rest-api-with-spring-secuirty.html) I've successfully set up Spring Security to protect my REST API. But I did so with in memory users and where is the fun in that.  So "mad with power" I decided to add to current security setup and add a `/register` route for adding new users and also allow those users to log in and do stuff.
