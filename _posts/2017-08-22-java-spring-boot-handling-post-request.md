@@ -1,5 +1,6 @@
 ---
 title: Java Spring - handling POST request
+layout: default
 date: '2017-08-22 20:30:00'
 ---
 
