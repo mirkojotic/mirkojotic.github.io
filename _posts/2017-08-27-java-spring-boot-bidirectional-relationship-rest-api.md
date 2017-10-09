@@ -1,6 +1,5 @@
 ---
 title: Java Spring - bidirectional relationship between models
-layout: post
 date: '2017-08-27 16:50:00'
 ---
 
