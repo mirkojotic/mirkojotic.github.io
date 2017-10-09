@@ -1,5 +1,6 @@
 ---
 title: Java Spring - Adding validation to REST endpoints
+layout: post
 date: '2017-10-08 21:04:24'
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Java Spring - Adding Authentication to REST API with Spring Security
+layout: post
 date: '2017-09-10 16:17:26'
 ---
 
