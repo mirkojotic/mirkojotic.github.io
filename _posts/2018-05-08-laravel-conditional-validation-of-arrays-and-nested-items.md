@@ -3,16 +3,7 @@ title: 'Laravel: Conditional Validation of Arrays and Nested Items'
 date: '2018-05-08 16:13:11'
 ---
 
-<style type="text/css">
-	img {
-		display: flex;
-		margin: 0 auto;
-	}
-</style>
-
 One of the features Laravel comes bundled with is validation. [`Validator`](https://laravel.com/api/4.2/Illuminate/Validation/Validator.html) comes with Laravel and it is amazing (IMHO)! Take it from someone who has had to validate input in a lot of frameworks and languages.
-
-![Cover Image]({{ "/assets/validation.png" | absolute_url }})
 
 A lot of what Laravel `Validator` can do is already in docs, I will just provide a semi-real-world example.
 
@@ -29,10 +20,9 @@ Route::post('/notifyme', 'NotificationController@notifyme');
 
 First we add a route that will handle users submission. After that we create `NotificationController` and add a `notifyme` method.
 
-`app/Http/Controllers/NotificationController.php`
 ```php
-
 <?php
+// app/Http/Controllers/NotificationController.php
 
 namespace App\Http\Controllers;
 
