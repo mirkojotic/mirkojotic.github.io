@@ -27,6 +27,9 @@ google_analytics: UA-104945391-1
 markdown: kramdown
 # theme: jekyll-theme-minimal
 theme: minima 
+plugins:
+  - jekyll-feed
+
 plugins_dir:
   - jekyll-feed
 #  - jekyll-admin
